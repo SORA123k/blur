@@ -28,10 +28,17 @@ Grab one of these from [Releases](https://github.com/SORA123k/blur/releases):
 
 | Type | File | Difference |
 | --- | --- | --- |
-| **Installer** (recommended) | `blur-v2.45-multilingual-setup-win64.exe` | Installs into your user profile, **no admin rights**; creates desktop + start menu shortcuts; `uninstall.cmd` in the install folder removes it. |
+| **Installer** (recommended) | `blur-v2.45-multilingual-setup-win64.exe` | Installs into your user profile, **no admin rights**, nothing else to install; asks whether to create a **desktop shortcut** (on by default, can be declined); registers in "Settings → Apps → Installed apps" for uninstalling. |
 | **Portable** | `blur-v2.45-multilingual-portable-win64.zip` | Unzip anywhere (avoid non-ASCII paths), run `blur-gui.exe`. No registry writes, no shortcuts, delete the folder to remove. |
 
-Both carry every runtime dependency (FFmpeg, VapourSynth, RIFE models, fonts) — nothing else to install.
+Both carry every runtime dependency (FFmpeg, VapourSynth, RIFE models, fonts) — install and go, nothing else needed.
+
+Installer details:
+
+- Installs to `%LOCALAPPDATA%\Programs\blur`, current user only, nothing in Program Files
+- Asks once whether to create a desktop shortcut; "No" leaves only the start menu shortcut
+- Uninstall from Settings → Apps → Installed apps → blur (same as running `uninstall.cmd`)
+- Unattended: `blur-v2.45-multilingual-setup-win64.exe /S` (optionally `--no-desktop-shortcut`)
 
 ### Requirements
 

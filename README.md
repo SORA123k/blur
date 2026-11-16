@@ -27,10 +27,17 @@
 
 | 类型 | 文件 | 区别 |
 | --- | --- | --- |
-| **安装版**（推荐） | `blur-v2.45-multilingual-setup-win64.exe` | 双击安装到当前用户目录，**不需要管理员**；自动创建桌面和开始菜单快捷方式；安装目录里有 `uninstall.cmd` 可卸载。 |
+| **安装版**（推荐） | `blur-v2.45-multilingual-setup-win64.exe` | 双击安装到当前用户目录，**不需要管理员**，无需另装依赖；安装时会问**是否创建桌面快捷方式**（默认创建，可取消）；自动注册到「设置 → 应用 → 已安装的应用」，可在那里卸载。 |
 | **便携版** | `blur-v2.45-multilingual-portable-win64.zip` | 解压到任意目录（建议不含中文和空格的路径），双击 `blur-gui.exe` 直接用；不写注册表、不建快捷方式，删目录即卸载。 |
 
-两个包内容一致，都自带运行库（FFmpeg、VapourSynth、RIFE 模型、中文字体），**不需要另装任何东西**。
+两个包内容一致，都自带运行库（FFmpeg、VapourSynth、RIFE 模型、多语言字体），**装完直接可用，不需要另装任何东西**。
+
+安装版细节：
+
+- 安装位置 `%LOCALAPPDATA%\Programs\blur`，只影响当前用户，不写 Program Files
+- 安装时会问一次「要在桌面创建快捷方式吗？」，选「否」就只创建开始菜单快捷方式
+- 卸载：设置 → 应用 → 已安装的应用 → blur → 卸载（等价于运行安装目录下的 `uninstall.cmd`）
+- 无人值守安装：`blur-v2.45-multilingual-setup-win64.exe /S`（可加 `--no-desktop-shortcut`）
 
 ### 系统要求
 

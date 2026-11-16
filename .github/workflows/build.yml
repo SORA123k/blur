@@ -10,40 +10,39 @@ on:
 jobs:
   windows:
     runs-on: windows-latest
+    env:
+      # the runner has no ACTIONS_RUNTIME_TOKEN, so the gha backend would fail
+      VCPKG_BINARY_SOURCES: clear
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Enable long paths
+      - name: Show toolchain versions
         shell: pwsh
         run: |
-          git config --global core.longpaths true
+          cmake --version
+          "vcpkg root: $env:VCPKG_INSTALLATION_ROOT"
+          & "$env:VCPKG_INSTALLATION_ROOT\vcpkg.exe" version
 
-      - name: Install CMake + Ninja
-        uses: lukka/get-cmake@latest
-
-      - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v11
-        with:
-          vcpkgGitCommitId: 9f8fff7f4cc138d96fe881c37878ee23ed395fc9
-
+      # The Visual Studio generator is used on purpose: it needs no ninja, and the
+      # windows runner image already carries MSVC + Windows SDK + vcpkg.
       - name: Configure
         shell: pwsh
         run: |
           # the project forces a static boost + static CRT, so the triplet must be static
-          cmake -S . -B build -G Ninja `
-            -DCMAKE_BUILD_TYPE=Release `
-            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake" `
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
+            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake" `
             -DVCPKG_TARGET_TRIPLET=x64-windows-static
 
       - name: Build
         shell: pwsh
-        run: cmake --build build --target blur blur-cli
+        run: cmake --build build --config Release --target blur blur-cli
 
       - name: Collect artifacts
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path out | Out-Null
-          Copy-Item build\blur-gui.exe, build\blur-cli.exe out\
+          Copy-Item build\Release\blur-gui.exe, build\Release\blur-cli.exe out\
           Copy-Item -Recurse src\vapoursynth out\lib
           Copy-Item LICENSE, THIRD-PARTY-NOTICES.txt out\
 

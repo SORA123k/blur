@@ -45,10 +45,19 @@ jobs:
       - name: Collect artifacts
         shell: pwsh
         run: |
+          # CMAKE_RUNTIME_OUTPUT_DIRECTORY points at <source>/bin/<config>; with the
+          # multi-config VS generator the path depends on the generator, so look it up.
+          $gui = Get-ChildItem -Recurse -Filter blur-gui.exe -ErrorAction SilentlyContinue |
+                   Where-Object { $_.FullName -notmatch 'vcpkg_installed' } | Select-Object -First 1
+          if (-not $gui) { throw "blur-gui.exe was not produced" }
+          $outDir = $gui.DirectoryName
+          "artifacts in $outDir"
           New-Item -ItemType Directory -Force -Path out | Out-Null
-          Copy-Item build\Release\blur-gui.exe, build\Release\blur-cli.exe out\
+          Copy-Item $gui.FullName out\
+          Copy-Item (Join-Path $outDir "blur-cli.exe") out\
           Copy-Item -Recurse src\vapoursynth out\lib
           Copy-Item LICENSE, THIRD-PARTY-NOTICES.txt out\
+          Get-ChildItem out | Select-Object Name, Length
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

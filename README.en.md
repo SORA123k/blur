@@ -46,6 +46,13 @@ Installer details:
 - RIFE interpolation needs a Vulkan capable GPU; if none is detected, set "Configuration → Interpolation → interpolation method" to `svp` (works on CPU, just slower)
 - The installer uses the bundled `tar.exe` (Windows 10 1803+); older systems should use the portable zip
 
+## Fixed in this fork
+
+- Interface language / real flag picker / UI scaling / preview cleanup (see above)
+- **Non-ASCII paths**: a video whose name is not ASCII used to crash the CLI (0xC0000409), and installing under a
+  non-ASCII path (a Chinese user name, for example) made `rife_model` break the settings JSON with
+  `type_error.316`. Both are fixed and verified: renders from a Chinese-named clip and from a Chinese install path.
+
 ## Usage
 
 1. Drop a video onto the window, or press **Open file**

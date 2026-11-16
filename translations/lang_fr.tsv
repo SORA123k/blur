@@ -1,0 +1,196 @@
+1	Veuillez retélécharger et installer la dernière version.
+2	FFmpeg introuvable.
+3	FFprobe introuvable.
+4	VapourSynth introuvable.
+5	Si vous ne savez pas ce que cela signifie, essayez l'installateur.
+6	(1: meilleur, 23: équilibré, 51: pire)\\n
+7	(0: meilleur, 23: équilibré, 51: pire)
+8	(1: meilleur, 23: équilibré, 51: pire)
+9	(100: meilleur, 0: pire)
+10	(0: proxy, 1: lt, 2: std, 3: hq, 4: 4444xq)
+11	(0: sans perte, 23: équilibré, 51: pire)
+12	(15: meilleur, 30: équilibré, 50: pire)
+13	Le chemin d'entrée n'existe pas
+14	Erreur : {}
+15	Chargement de la config : {}
+16	Config importée
+17	Échec du chargement de la config : 
+18	Continuer
+19	Pause
+20	Annuler
+21	Ajouter des fichiers
+22	Configuration
+23	Retour
+24	Échec du rendu de '{}', cliquez pour copier l'erreur
+25	Erreur copiée dans le presse-papiers
+26	Échec du rendu du flou
+27	Rendu de '{}' arrêté
+28	Rendu de '{}' terminé
+29	Impossible d'ouvrir le dossier de sortie : {}
+30	Rendu du flou terminé
+31	Rendu terminé avec succès
+32	Échec de l'initialisation de SDL
+33	Échec de la création de la fenêtre SDL
+34	Échec de la création du contexte GL SDL
+35	Échec de l'initialisation de GLAD
+36	Échec de l'initialisation du moteur de rendu
+37	Nouvelle version ({}) disponible ! Cliquez pour lancer l'installateur.
+38	Téléchargement de la mise à jour...
+39	Nouvelle version ({}) disponible ! Cliquez pour la page de téléchargement.
+40	Ajouté à la file de rendu : '{}'
+41	Fichier non valide ou illisible : {}
+42	Utiliser la config de remplacement du dossier vidéo
+43	Vidéo d'exemple ajoutée
+44	Fichiers vidéo
+45	En pause
+46	Image {}/{}
+47	{:.2f} img/s
+48	 h 
+49	 min 
+50	 s
+51	Restant ~ {}
+52	Initialisation du rendu...
+53	Échec de l'initialisation
+54	Ouvrir un fichier
+55	ou déposez-le n'importe où dans la fenêtre
+56	Chargement de la config...
+57	Enregistrer
+58	Réinitialiser les modifications
+59	Valeurs par défaut
+60	Vidéo de sortie
+61	Poids
+62	Réglages de cette section modifiés, activation forcée
+63	Flou
+64	Intensité du flou : {:.2f}
+65	Fréquence de sortie : {} fps
+66	Pondération du flou
+67	Gamma du flou : {:.2f}
+68	Interpolation
+69	Interpoler par facteur
+70	Fréquence d'interpolation : {:.1f}x
+71	Fréquence d'interpolation : {} fps
+72	Méthode d'interpolation
+73	Pré-interpolation
+74	Pré-interpoler par facteur
+75	Fréquence de pré-interpolation : {:.1f}x
+76	Fréquence de pré-interpolation : {} fps
+77	Déduplication
+78	Méthode de déduplication
+79	Rendre
+80	Preset d'encodage ({})
+81	Qualité : {}
+82	Qualité remplacée par le filtre FFmpeg personnalisé
+83	Aperçu
+84	Nom de fichier détaillé
+85	Copier la date
+86	Chemin de sortie
+87	Accélération GPU
+88	Décodage GPU
+89	Interpolation GPU
+90	Encodage GPU
+91	Périphérique d'encodage GPU
+92	Encodage GPU remplacé par le filtre FFmpeg personnalisé
+93	Par défaut - premier périphérique disponible
+94	Échelle temporelle
+95	Échelle temporelle d'entrée : {:.2f}
+96	Échelle temporelle de sortie : {:.2f}
+97	Ajuster la hauteur audio après changement de vitesse
+98	Filtres
+99	Luminosité : {:.2f}
+100	Saturation : {:.2f}
+101	Contraste : {:.2f}
+102	Avancé
+103	Déduplication avancée
+104	Plage de déduplication : {}
+105	-1 = illimité
+106	Seuil de déduplication
+107	Le seuil doit être un décimal
+108	Rendu avancé
+109	Conteneur vidéo
+110	Filtre FFmpeg personnalisé
+111	-c:a copy impossible avec une échelle temporelle
+112	Débogage
+113	Interpolation avancée
+114	Preset d'interpolation SVP
+115	Algorithme d'interpolation SVP
+116	Taille de bloc d'interpolation
+117	Zone de masque d'interpolation : {}
+118	Modèle RIFE
+119	Flou avancé
+120	Écart-type des poids gaussiens : {:.2f}
+121	Moyenne des poids gaussiens : {:.2f}
+122	Limite des poids gaussiens
+123	Interpolation {} chargée, facteur : {} (fréquence : {}, facteur : {})
+124	Activer le flou de mouvement
+125	Intensité du flou de mouvement
+126	(0 = aucun flou, 1 = mélange total des images, >1 = images en plus (rémanence))
+127	Fréquence d'images de la sortie
+128	Assombrit l'image avant le flou, met les hautes lumières en avant
+129	Écart-type des poids du flou gaussien
+130	Inverse le sens des poids triangulaires
+131	Limite des poids, rend la répartition plus uniforme
+132	Interpoler à une fréquence plus élevée avant le flou
+133	Interpoler par facteur au lieu d'une fréquence fixe
+134	Facteur d'interpolation
+135	La vidéo d'entrée sera interpolée à cette fréquence (avant le flou)
+136	Fréquence cible de l'interpolation (avant le flou)
+137	Qualité : rife > svp
+138	Vitesse : svp > rife
+139	Pré-interpoler avec un modèle IA plus précis mais plus lent
+140	Facteur de pré-interpolation
+141	Entrée interpolée à cette fréquence (avant interpolation et flou)
+142	Fréquence cible de la pré-interpolation (avant le flou)
+143	Plus d'infos sur la page GitHub de blur
+144	Taille de bloc de l'interpolation
+145	(plus grand = plus grossier mais plus rapide, plus petit = plus fin mais plus lent)
+146	Quantité de masque de l'interpolation
+147	(plus grand = moins de flou sur les objets fixes, mais fluidité réduite)
+148	Supprimer les images en double et les remplacer par l'interpolation
+149	(corrige les saccades dues aux à-coups d'enregistrement)
+150	Images à chercher en arrière pour une image unique
+151	Augmentez si la source est lente (ex. jeu 120 fps capturé en 240 fps) 
+152	Diminuez si les éléments fixes (ex. menus) sont aussi flous
+153	Seuil de mouvement déclenchant la déduplication
+154	Activez le débogage dans « Avancé » et lancez un rendu pour voir le mouvement par image
+155	Vitesse : old > svp > rife
+156	Afficher l'aperçu pendant le rendu
+157	Inclure les réglages de flou dans le nom du fichier
+158	Activer l'ajustement de l'échelle temporelle
+159	Échelle temporelle de la vidéo d'entrée
+160	Échelle temporelle de la vidéo de sortie
+161	Changer la hauteur audio avec la vitesse
+162	Activer les filtres vidéo
+163	Ajuster la luminosité de la sortie
+164	Ajuster la saturation de la sortie
+165	Ajuster le contraste de la sortie
+166	Interpoler avec le GPU
+167	Rendre avec le GPU
+168	Choisir le type de GPU
+169	Format de conteneur de la sortie
+170	Filtre FFmpeg personnalisé utilisé au rendu
+171	(remplace les options GPU et qualité)
+172	Afficher la fenêtre de débogage et la commande blur
+173	Copier la date de modification du fichier source
+174	Échec de l'aperçu de la config, cliquez pour copier l'erreur
+175	Chargement de l'aperçu de la config...
+176	Échec de la génération de l'aperçu.
+177	Aucune vidéo d'aperçu trouvée.
+178	Déposez une vidéo ici pour l'ajouter
+179	ou ouvrir un fichier
+180	Remettre les réglages invalides à leur défaut
+181	Exporter
+182	Config exportée dans le presse-papiers
+183	Importer
+184	Config importée depuis le presse-papiers
+185	Presse-papiers vide ou illisible
+186	Ouvrir le dossier de config
+187	Impossible d'ouvrir le dossier de config : {}
+188	Échec de l'initialisation des notifications : {}
+189	Notifications non initialisées
+190	Échec de l'affichage de la notification : {}
+191	Image sans flou
+192	Image précédente
+193	Image actuelle
+194	Image floue ({})
+195	Le nombre d'images floues dépend de la fréquence d'entrée
+196	Échelle de l'interface

@@ -1,0 +1,119 @@
+blur 汉化版 —— 第三方组件与许可证声明
+================================================================
+版本：基于 f0e/blur v2.45（commit 6fd0ecc）
+汉化日期：2026-10
+本文件对应的完整许可证原文，全部位于本目录的 LICENSES/ 下。
+
+一、本软件主体
+----------------------------------------------------------------
+blur 本体          : f0e/blur v2.45，GPL-3.0
+                      https://github.com/f0e/blur
+                      许可证原文：LICENSES/GPL-3.0.txt
+汉化修改部分       : 同样以 GPL-3.0 发布（界面文本本地化、/utf-8 编译
+                      适配、内嵌开源中文字体、关闭自动更新检查）。
+                      改动清单见 README-发布版.md 第四节。
+本软件整体按 GPL-3.0 分发。你可以自由使用、研究、修改、再分发，
+条件是衍生作品同样使用 GPL-3.0，并且提供对应源码（GPL-3.0 §5、§6）。
+对应源码即本包内 1-源码/blur-git 目录（完整可编译快照）。
+
+二、随包分发的第三方程序
+----------------------------------------------------------------
+1. FFmpeg
+   版本    : 2025-08-14-git-cdbb5f1b93-full_build-www.gyan.dev
+   许可    : GPL-3.0（该构建启用 --enable-gpl --enable-version3）
+   位置    : lib/ffmpeg/ffmpeg.exe、ffprobe.exe
+   用途    : 由 blur 以子进程方式调用，进行编码与封装（未链接进 exe）。
+   说明    : 该二进制是 GPLv3 构建，因此 FFmpeg 本身也以 GPLv3 分发，
+             其对应源码可在 https://ffmpeg.org/download.html 获取
+             （对应提交 cdbb5f1b93），该构建的编译脚本与源码索引见
+             https://www.gyan.dev/ffmpeg/builds/ 。许可证原文见
+             LICENSES/GPL-3.0.txt。
+
+2. VapourSynth
+   许可    : LGPL-2.1
+   位置    : lib/vapoursynth/（VSScript.dll、VSPipe.exe、vs-coreplugins/ 等）
+   说明    : 作为动态库使用，用户可自行替换为其他兼容版本。
+             许可证原文：LICENSES/LGPL-2.1-vapoursynth.txt
+
+3. Python（内嵌运行时）
+   许可    : Python Software Foundation License
+   位置    : lib/vapoursynth/python.exe、python3*.dll、Lib/ 等
+   许可证原文：LICENSES/Python-PSF-license.txt
+
+4. VapourSynth 插件（lib/vapoursynth/vs-plugins/）
+   这些插件随上游安装包一同分发，本汉化版未做任何修改：
+     LSMASHSource.dll            L-SMASH Works，许可证见其上游仓库
+     BestSource.dll              BestSource，许可证见其上游仓库
+     akarin.dll                  Akarin，许可证见其上游仓库
+     adjust.dll                  Adjust，许可证见其上游仓库
+     libmvtools.dll              MVTools，GPL-2.0
+     svpflow1_vs64.dll           SVPflow（SVP 团队），按其自身授权分发
+     svpflow2_vs64.dll           SVPflow（SVP 团队），按其自身授权分发
+     vapoursynth-rife-ncnn-vulkan.dll
+                                 RIFE ncnn Vulkan 插件，MIT
+   如你不需要其中某个插件，直接删除对应 DLL 即可，不影响其余功能。
+
+5. RIFE 模型
+   位置    : lib/models/rife-v4.26_ensembleFalse/flownet.bin、flownet.param
+   许可    : MIT（RIFE 项目，Copyright (c) Megvii Inc.）
+   许可证原文：LICENSES/MIT-RIFE.txt
+
+6. 7-Zip
+   位置    : lib/vapoursynth/7z.exe、7z.dll
+   许可    : LGPL-2.1，附 unRAR 限制条款
+   许可证原文：LICENSES/LGPL-7zip.txt
+
+三、编译进 blur-gui.exe 的开源库
+----------------------------------------------------------------
+以下组件以静态库形式链接进可执行文件，其许可证要求随二进制保留版权声明：
+
+  Dear ImGui   MIT          Copyright (c) 2014-2026 Omar Cornut
+                            LICENSES/MIT-imgui.txt
+  SDL3         Zlib         Copyright (c) 1997-2026 Sam Lantinga
+                            LICENSES/Zlib-SDL3.txt
+  SDL3_image   Zlib         LICENSES/Zlib-SDL3-image.txt
+  stb          MIT / 公共领域  Copyright (c) 2017 Sean Barrett
+                            LICENSES/MIT-stb.txt
+  spdlog       MIT          LICENSES/MIT-spdlog.txt
+  cpr          MIT          LICENSES/MIT-cpr.txt
+  nlohmann/json MIT         LICENSES/MIT-nlohmann-json.txt
+  CLI11        BSD-3-Clause LICENSES/BSD-3-CLI11.txt
+  googletest   BSD-3-Clause LICENSES/BSD-3-googletest.txt（仅测试可执行文件）
+  glad         MIT（生成器）/ 公共领域（生成代码）
+                            LICENSES/MIT-glad.txt
+  tl::expected CC0 1.0      LICENSES/CC0-tl-expected.txt
+  Boost        BSL-1.0      LICENSES/BSL-1.0-boost.txt
+  FreeType     FTL           LICENSES/FTL-freetype.txt
+  cppwinrt     MIT          LICENSES/MIT-cppwinrt.txt
+
+四、字体
+----------------------------------------------------------------
+界面中文字体为 Noto Sans SC 的子集（4276 个字形，覆盖全部界面用字
+与 GB2312 一级汉字）。
+  许可    : SIL Open Font License 1.1
+  版权    : Copyright 2014-2021 Adobe (http://www.adobe.com/),
+            with Reserved Font Name 'Source'.
+  原文    : LICENSES/OFL-1.1-NotoSansSC.txt
+  子集文件: 3-字体/cn_sans.ttf，编译进程序的是 3-字体/cn_sans.h
+本子集仅裁剪字形集合，未修改字形轮廓；未使用保留字体名 "Source"，
+字体族名仍为 "Noto Sans SC"，符合 OFL 1.1 对衍生字体的要求。
+OFL 允许随软件一同分发字体，但字体本身仍受 OFL 约束，不因本软件
+的 GPL 授权而改变。
+
+本汉化版不含任何商业字体（原开发过程中曾使用系统自带的微软雅黑
+做界面预览，该字体未被、也不会被分发）。
+
+五、源码获取（GPL-3.0 §6）
+----------------------------------------------------------------
+本软件（含汉化修改）的完整对应源码：本包 1-源码/blur-git 目录。
+第三方组件的源码请见各组件上游地址，其中：
+  FFmpeg   https://ffmpeg.org/download.html
+  VapourSynth https://github.com/vapoursynth/vapoursynth
+  RIFE     https://github.com/hzwer/ECCV2022-RIFE
+  Noto Sans SC https://github.com/google/fonts/tree/main/ofl/notosanssc
+
+六、免责
+----------------------------------------------------------------
+本汉化版由第三方社区制作，与上游作者 f0e 及各第三方组件作者
+无隶属、授权或背书关系。软件按「现状」提供，不附带任何担保。
+如任一权利人认为本分发方式不妥，收到通知后立即停止分发并下架。

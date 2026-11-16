@@ -1,0 +1,12 @@
+build/
+out/
+dist/
+vcpkg_installed*/
+*.obj
+*.pdb
+*.ilk
+*.user
+__pycache__/
+tools/.font-work/
+tools/.flags/
+NotoSans*.ttf

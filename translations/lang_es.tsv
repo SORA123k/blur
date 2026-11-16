@@ -1,0 +1,196 @@
+1	Vuelve a descargar e instalar la última versión.
+2	No se encuentra FFmpeg.
+3	No se encuentra FFprobe.
+4	No se encuentra VapourSynth.
+5	Si no sabes qué significa, usa el instalador.
+6	(1: mejor, 23: equilibrado, 51: peor)\\n
+7	(0: mejor, 23: equilibrado, 51: peor)
+8	(1: mejor, 23: equilibrado, 51: peor)
+9	(100: mejor, 0: peor)
+10	(0: proxy, 1: lt, 2: std, 3: hq, 4: 4444xq)
+11	(0: sin pérdidas, 23: equilibrado, 51: peor)
+12	(15: mejor, 30: equilibrado, 50: peor)
+13	La ruta de entrada no existe
+14	Error: {}
+15	Cargando configuración: {}
+16	Configuración importada
+17	Error al cargar la configuración: 
+18	Continuar
+19	Pausar
+20	Cancelar
+21	Añadir archivo
+22	Configuración
+23	Volver
+24	Error al renderizar '{}', clic para copiar el error
+25	Error copiado al portapapeles
+26	Error en el renderizado del desenfoque
+27	Renderizado de '{}' detenido
+28	Renderizado de '{}' completado
+29	No se pudo abrir la carpeta de salida: {}
+30	Renderizado del desenfoque completado
+31	Renderizado completado correctamente
+32	Error al iniciar SDL
+33	Error al crear la ventana SDL
+34	Error al crear el contexto SDL GL
+35	Error al iniciar GLAD
+36	Error al iniciar el renderizador
+37	¡Nueva versión ({}) disponible! Clic para ejecutar el instalador.
+38	Descargando actualización...
+39	¡Nueva versión ({}) disponible! Clic para ir a la descarga.
+40	Añadido a la cola de renderizado: '{}'
+41	El archivo no es un vídeo válido o no se puede leer: {}
+42	Usar configuración de anulación de la carpeta de vídeo
+43	Vídeo de ejemplo añadido
+44	Archivo de vídeo
+45	En pausa
+46	Fotograma {}/{}
+47	{:.2f} fps
+48	 h 
+49	 min 
+50	 s
+51	Quedan aprox. {}
+52	Iniciando renderizado...
+53	Error al iniciar
+54	Abrir archivo
+55	o arrastra a cualquier parte de la ventana
+56	Cargando configuración...
+57	Guardar
+58	Restablecer cambios
+59	Restaurar por defecto
+60	Vídeo de salida
+61	Peso
+62	Ajustes de esta sección modificados, activado por fuerza
+63	Desenfoque
+64	Intensidad del desenfoque: {:.2f}
+65	Fotogramas de salida: {} fps
+66	Ponderación del desenfoque
+67	Gamma del desenfoque: {:.2f}
+68	Interpolación
+69	Interpolar por múltiplo
+70	Factor de interpolación: {:.1f}x
+71	Fotogramas interpolados: {} fps
+72	Método de interpolación
+73	Preinterpolación
+74	Preinterpolar por múltiplo
+75	Factor de preinterpolación: {:.1f}x
+76	Fotogramas preinterpolados: {} fps
+77	Deduplicar
+78	Método de deduplicación
+79	Renderizar
+80	Preajuste de codificación ({})
+81	Calidad: {}
+82	Calidad anulada por un filtro FFmpeg propio
+83	Vista previa
+84	Nombre de archivo detallado
+85	Copiar fecha
+86	Ruta de salida
+87	Aceleración GPU
+88	Decodificación GPU
+89	Interpolación GPU
+90	Codificación GPU
+91	Dispositivo de codificación GPU
+92	Codificación GPU anulada por un filtro FFmpeg propio
+93	Predeterminado - primer dispositivo disponible
+94	Escala de tiempo
+95	Escala de tiempo de entrada: {:.2f}
+96	Escala de tiempo de salida: {:.2f}
+97	Ajustar el tono del audio tras cambiar la velocidad
+98	Filtros
+99	Brillo: {:.2f}
+100	Saturación: {:.2f}
+101	Contraste: {:.2f}
+102	Avanzado
+103	Deduplicación avanzada
+104	Rango de deduplicación: {}
+105	-1 = infinito
+106	Umbral de deduplicación
+107	El umbral debe ser decimal
+108	Renderizado avanzado
+109	Contenedor de vídeo
+110	Filtro FFmpeg propio
+111	Con escala de tiempo no se puede usar -c:a copy
+112	Depuración
+113	Interpolación avanzada
+114	Preajuste SVP de interpolación
+115	Algoritmo SVP de interpolación
+116	Tamaño de bloque de interpolación
+117	Zona de máscara de interpolación: {}
+118	Modelo RIFE
+119	Desenfoque avanzado
+120	Desviación del peso gaussiano: {:.2f}
+121	Media del peso gaussiano: {:.2f}
+122	Límite del peso gaussiano
+123	Interpolación {} cargada, factor: {} (fps: {}, factor: {})
+124	Activar desenfoque de movimiento
+125	Intensidad del desenfoque de movimiento
+126	(0 = sin desenfoque, 1 = mezcla total de fotogramas, >1 = fotogramas extra (estela))
+127	Fotogramas por segundo del vídeo de salida
+128	Cuánto oscurecer antes del desenfoque, resalta las luces
+129	Desviación del peso del desenfoque gaussiano
+130	Invertir la dirección del peso triangular
+131	Límite de peso para una distribución más uniforme
+132	Interpolar a más fps antes del desenfoque
+133	Interpolar por múltiplo en vez de fps fijos
+134	Factor de interpolación
+135	El vídeo de entrada se interpolará a estos fps (antes del desenfoque)
+136	Fps objetivo de interpolación de entrada (antes del desenfoque)
+137	Calidad: rife > svp
+138	Velocidad: svp > rife
+139	Antes de la interpolación principal, con un modelo AI más preciso y lento
+140	Factor de preinterpolación
+141	El vídeo de entrada se interpolará a estos fps (antes de la interpolación y el desenfoque)
+142	Fps objetivo de preinterpolación (antes del desenfoque)
+143	Más información en la página de blur en GitHub
+144	Tamaño de bloque de la interpolación
+145	(mayor = más tosco pero rápido; menor = más fino pero lento)
+146	Cantidad de máscara de interpolación
+147	(mayor reduce el desenfoque de objetos estáticos, pero puede afectar la fluidez)
+148	Quitar fotogramas duplicados y sustituirlos por la interpolación
+149	(corrige la salida entrecortada por fallos de grabación)
+150	Rango de fotogramas para buscar uno único al deduplicar
+151	Si los fps del material son bajos (p. ej. juego a 120fps grabado a 240fps), auméntalo 
+152	Si también se desenfocan elementos estáticos (p. ej. menús), redúcelo
+153	Umbral de movimiento que activa la deduplicación
+154	Activa la depuración en "Avanzado" y renderiza para ver el movimiento de cada fotograma
+155	Velocidad: old > svp > rife
+156	Mostrar vista previa al renderizar
+157	Incluir los ajustes de desenfoque en el nombre del archivo
+158	Activar el ajuste de escala de tiempo
+159	Escala de tiempo del vídeo de entrada
+160	Escala de tiempo del vídeo de salida
+161	Cambiar el tono del audio con la velocidad
+162	Activar filtros de vídeo
+163	Brillo del vídeo de salida
+164	Saturación del vídeo de salida
+165	Contraste del vídeo de salida
+166	Interpolar con GPU
+167	Renderizar con GPU
+168	Elegir tipo de GPU
+169	Formato de contenedor del vídeo de salida
+170	Filtro FFmpeg propio usado al renderizar
+171	(anula las opciones de GPU y calidad)
+172	Mostrar la ventana de depuración e imprimir los comandos de blur
+173	Copiar la fecha de modificación del archivo de entrada
+174	Error al generar la vista previa, clic para copiar el error
+175	Cargando la vista previa de la configuración...
+176	No se pudo generar la vista previa.
+177	No se encontró el vídeo de vista previa.
+178	Arrastra el vídeo aquí para añadirlo
+179	o abre un archivo
+180	Restablecer los ajustes no válidos
+181	Exportar
+182	Configuración exportada al portapapeles
+183	Importar
+184	Configuración importada del portapapeles
+185	El portapapeles está vacío o no se puede leer
+186	Abrir la carpeta de configuración
+187	No se pudo abrir la carpeta de configuración: {}
+188	Error al iniciar las notificaciones: {}
+189	Notificaciones no inicializadas
+190	No se pudo mostrar la notificación: {}
+191	Fotograma sin desenfoque
+192	Fotograma anterior
+193	Fotograma actual
+194	Fotograma de desenfoque ({})
+195	El número de fotogramas de desenfoque depende de los fps de entrada
+196	Escala de la interfaz

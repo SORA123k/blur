@@ -1,0 +1,196 @@
+1	Bitte die neueste Version erneut herunterladen und installieren.
+2	FFmpeg nicht gefunden.
+3	FFprobe nicht gefunden.
+4	VapourSynth nicht gefunden.
+5	Wenn Sie nicht wissen, was das bedeutet, versuchen Sie den Installer.
+6	(1: beste, 23: ausgewogen, 51: schlechteste)\\n
+7	(0: beste, 23: ausgewogen, 51: schlechteste)
+8	(1: beste, 23: ausgewogen, 51: schlechteste)
+9	(100: beste, 0: schlechteste)
+10	(0: Proxy, 1: lt, 2: std, 3: hq, 4: 4444xq)
+11	(0: verlustfrei, 23: ausgewogen, 51: schlechteste)
+12	(15: beste, 30: ausgewogen, 50: schlechteste)
+13	Eingabepfad existiert nicht
+14	Fehler: {}
+15	Konfiguration wird geladen: {}
+16	Konfiguration importiert
+17	Laden der Konfiguration fehlgeschlagen: 
+18	Fortsetzen
+19	Pause
+20	Abbrechen
+21	Dateien hinzufügen
+22	Konfiguration
+23	Zurück
+24	Rendern von '{}' fehlgeschlagen, klicken zum Kopieren
+25	Fehler in die Zwischenablage kopiert
+26	Blur-Rendern fehlgeschlagen
+27	Rendern von '{}' gestoppt
+28	Rendern von '{}' abgeschlossen
+29	Ausgabeordner konnte nicht geöffnet werden: {}
+30	Blur-Rendern abgeschlossen
+31	Rendern erfolgreich abgeschlossen
+32	SDL-Initialisierung fehlgeschlagen
+33	SDL-Fenster konnte nicht erstellt werden
+34	SDL-GL-Kontext konnte nicht erstellt werden
+35	GLAD-Initialisierung fehlgeschlagen
+36	Renderer-Initialisierung fehlgeschlagen
+37	Neue Version ({}) verfügbar! Klicken, um das Setup zu starten.
+38	Update wird heruntergeladen...
+39	Neue Version ({}) verfügbar! Klicken für die Downloadseite.
+40	Zur Render-Warteschlange hinzugefügt: '{}'
+41	Datei ist kein gültiges Video oder nicht lesbar: {}
+42	Override-Config aus dem Videoordner nutzen
+43	Beispielvideo hinzugefügt
+44	Videodateien
+45	Pausiert
+46	Frame {}/{}
+47	{:.2f} Bilder/s
+48	 Std. 
+49	 Min. 
+50	 s
+51	Noch ca. {}
+52	Rendern wird initialisiert...
+53	Initialisierung fehlgeschlagen
+54	Datei öffnen
+55	oder irgendwo ins Fenster ziehen
+56	Konfiguration wird geladen...
+57	Speichern
+58	Änderungen zurücksetzen
+59	Standard wiederherstellen
+60	Ausgabevideo
+61	Gewichtung
+62	Einstellungen hier geändert, zwangsweise aktiviert
+63	Blur
+64	Blur-Stärke: {:.2f}
+65	Ausgabe-Framerate: {} fps
+66	Blur-Gewichtung
+67	Blur-Gamma: {:.2f}
+68	Frame-Interpolation
+69	Interpolation per Faktor
+70	Interpolations-Framerate: {:.1f}x
+71	Interpolations-Framerate: {} fps
+72	Interpolationsmethode
+73	Vor-Interpolation
+74	Vor-Interpolation per Faktor
+75	Vor-Interpolations-Framerate: {:.1f}x
+76	Vor-Interpolations-Framerate: {} fps
+77	Deduplizierung
+78	Deduplizierungsmethode
+79	Rendern
+80	Encoder-Preset ({})
+81	Qualität: {}
+82	Qualität durch eigenen FFmpeg-Filter überschrieben
+83	Vorschau
+84	Ausführlicher Dateiname
+85	Datum kopieren
+86	Ausgabepfad
+87	GPU-Beschleunigung
+88	GPU-Dekodierung
+89	GPU-Interpolation
+90	GPU-Kodierung
+91	GPU-Encoder-Gerät
+92	GPU-Kodierung durch eigenen FFmpeg-Filter überschrieben
+93	Standard - erstes verfügbares Gerät
+94	Zeitskala
+95	Eingabe-Zeitskala: {:.2f}
+96	Ausgabe-Zeitskala: {:.2f}
+97	Audiotonhöhe nach Tempowechsel anpassen
+98	Filter
+99	Helligkeit: {:.2f}
+100	Sättigung: {:.2f}
+101	Kontrast: {:.2f}
+102	Erweitert
+103	Erweiterte Deduplizierung
+104	Deduplizierungsbereich: {}
+105	-1 = unbegrenzt
+106	Deduplizierungs-Schwelle
+107	Schwelle muss eine Dezimalzahl sein
+108	Erweitertes Rendern
+109	Video-Container
+110	Eigener FFmpeg-Filter
+111	-c:a copy bei Zeitskala nicht möglich
+112	Debug
+113	Erweiterte Interpolation
+114	SVP-Interpolations-Preset
+115	SVP-Interpolationsalgorithmus
+116	Interpolations-Blockgröße
+117	Interpolations-Maskenbereich: {}
+118	RIFE-Modell
+119	Erweiterter Blur
+120	Stdabw. der Gauß-Gewichte: {:.2f}
+121	Mittelwert der Gauß-Gewichte: {:.2f}
+122	Rand der Gauß-Gewichte
+123	{} Interpolation geladen, Faktor: {} (Framerate: {}, Faktor: {})
+124	Bewegungsunschärfe aktivieren
+125	Stärke der Bewegungsunschärfe
+126	(0 = kein Blur, 1 = alle Frames voll mischen, >1 = zusätzliche Frames (Nachzieher))
+127	Framerate des Ausgabevideos
+128	Dunkelt das Bild vor dem Blur ab, hebt Highlights hervor
+129	Standardabweichung der Gauß-Blur-Gewichte
+130	Richtung der Dreiecks-Gewichte umkehren
+131	Gewichtsgrenze für gleichmäßigere Verteilung
+132	Vor dem Blur auf höhere Framerate interpolieren
+133	Per Faktor statt fester Framerate interpolieren
+134	Interpolationsfaktor
+135	Eingabevideo wird auf diese Framerate interpoliert (vor dem Blur)
+136	Ziel-Framerate der Interpolation (vor dem Blur)
+137	Qualität: rife > svp
+138	Geschwindigkeit: svp > rife
+139	Vorab mit präziserem, langsameren KI-Modell vor-interpolieren
+140	Vor-Interpolationsfaktor
+141	Eingabe wird auf diese Framerate interpoliert (vor Interpolation und Blur)
+142	Ziel-Framerate der Vor-Interpolation (vor dem Blur)
+143	Mehr Infos auf der GitHub-Seite von blur
+144	Blockgröße der Interpolation
+145	(größer = grober, aber schneller; kleiner = feiner, aber langsamer)
+146	Maskenmenge der Interpolation
+147	(größer = weniger Blur bei statischen Objekten, evtl. weniger flüssig)
+148	Doppelte Frames entfernen und durch Interpolation ersetzen
+149	(behebt Ruckler durch Aufnahme-Hänger)
+150	Frames für die Rückwärtssuche nach einem eindeutigen Frame
+151	Erhöhen, wenn die Quelle langsam ist (z.B. 120 fps Game mit 240 fps aufgenommen) 
+152	Verringern, wenn statische Elemente (z.B. Menüs) verwischen
+153	Bewegungs-Schwelle für Deduplizierung
+154	Debug unter „Erweitert“ aktivieren und rendern, um die Bewegung pro Frame zu sehen
+155	Geschwindigkeit: old > svp > rife
+156	Vorschau beim Rendern anzeigen
+157	Blur-Einstellungen im Dateinamen ergänzen
+158	Zeitskalen-Anpassung aktivieren
+159	Zeitskala des Eingabevideos
+160	Zeitskala des Ausgabevideos
+161	Tonhöhe beim Tempowechsel mit ändern
+162	Videofilter aktivieren
+163	Helligkeit des Ausgabevideos anpassen
+164	Sättigung des Ausgabevideos anpassen
+165	Kontrast des Ausgabevideos anpassen
+166	Interpolation per GPU
+167	Rendern per GPU
+168	GPU-Typ wählen
+169	Container-Format des Ausgabevideos
+170	Eigener FFmpeg-Filter beim Rendern
+171	(überschreibt GPU- und Qualitätsoptionen)
+172	Debug-Fenster zeigen und blur-Befehl ausgeben
+173	Änderungsdatum der Eingabedatei kopieren
+174	Config-Vorschau fehlgeschlagen, klicken zum Kopieren
+175	Config-Vorschau wird geladen...
+176	Vorschau konnte nicht erstellt werden.
+177	Kein Vorschauvideo gefunden.
+178	Video hierher ziehen, um es hinzuzufügen
+179	oder Datei öffnen
+180	Ungültige Einstellungen auf Standard zurücksetzen
+181	Exportieren
+182	Konfiguration in die Zwischenablage exportiert
+183	Importieren
+184	Konfiguration aus der Zwischenablage importiert
+185	Zwischenablage leer oder nicht lesbar
+186	Konfigurationsordner öffnen
+187	Konfigurationsordner konnte nicht geöffnet werden: {}
+188	Desktop-Benachrichtigungen nicht initialisierbar: {}
+189	Desktop-Benachrichtigungen nicht initialisiert
+190	Desktop-Benachrichtigung nicht anzeigbar: {}
+191	Frame ohne Blur
+192	Vorheriger Frame
+193	Aktueller Frame
+194	Blur-Frame ({})
+195	Anzahl der Blur-Frames hängt von der Eingabe-Framerate ab
+196	Oberflächenskalierung

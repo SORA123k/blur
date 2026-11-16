@@ -1,0 +1,196 @@
+1	Please download and install the latest version again.
+2	FFmpeg not found.
+3	FFprobe not found.
+4	VapourSynth not found.
+5	If you're not sure what this means, try the installer.
+6	(1: best, 23: balanced, 51: worst)\\n
+7	(0: best, 23: balanced, 51: worst)
+8	(1: best, 23: balanced, 51: worst)
+9	(100: best, 0: worst)
+10	(0: proxy, 1: lt, 2: std, 3: hq, 4: 4444xq)
+11	(0: lossless, 23: balanced, 51: worst)
+12	(15: best, 30: balanced, 50: worst)
+13	Input path does not exist
+14	Error: {}
+15	Loading config: {}
+16	Config imported
+17	Failed to load config: 
+18	Continue
+19	Pause
+20	Cancel
+21	Add file
+22	Config
+23	Back
+24	Failed to render '{}'; click to copy the error
+25	Error copied to clipboard
+26	Blur render failed
+27	Rendering '{}' stopped
+28	Rendering '{}' finished
+29	Failed to open the output folder: {}
+30	Blur render complete
+31	Render completed successfully
+32	SDL init failed
+33	Failed to create the SDL window
+34	Failed to create the SDL GL context
+35	Failed to initialize GLAD
+36	Failed to initialize the renderer
+37	New version ({}) available! Click to run the installer.
+38	Downloading update...
+39	New version ({}) available! Click to open the download page.
+40	Added to the render queue: '{}'
+41	File is not a valid video or cannot be read: {}
+42	Use the override config in the video's folder
+43	Sample video added
+44	Video file
+45	Paused
+46	Frame {}/{}
+47	{:.2f} fps
+48	 h 
+49	 m 
+50	 s
+51	About {} left
+52	Initializing render...
+53	Initialization failed
+54	Open file
+55	or drop it anywhere in the window
+56	Loading config...
+57	Save
+58	Reset changes
+59	Restore defaults
+60	Output video
+61	Weight
+62	Settings in this section changed, so this is forced on
+63	Blur
+64	Blur strength: {:.2f}
+65	Output frame rate: {} fps
+66	Blur weighting
+67	Blur gamma: {:.2f}
+68	Interpolation
+69	Interpolate by multiplier
+70	Interpolation rate: {:.1f}x
+71	Interpolation rate: {} fps
+72	Interpolation method
+73	Pre-interpolation
+74	Pre-interpolate by multiplier
+75	Pre-interpolation rate: {:.1f}x
+76	Pre-interpolation rate: {} fps
+77	Dedup
+78	Dedup mode
+79	Render
+80	Encoder preset ({})
+81	Quality: {}
+82	Quality is overridden by custom FFmpeg filters
+83	Preview
+84	Detailed file name
+85	Copy date
+86	Output path
+87	GPU acceleration
+88	GPU decoding
+89	GPU interpolation
+90	GPU encoding
+91	GPU encoding device
+92	GPU encoding is overridden by custom FFmpeg filters
+93	Default - use the first available device
+94	Time scale
+95	Input time scale: {:.2f}
+96	Output time scale: {:.2f}
+97	Shift the audio pitch to match the new speed
+98	Filters
+99	Brightness: {:.2f}
+100	Saturation: {:.2f}
+101	Contrast: {:.2f}
+102	Advanced
+103	Advanced dedup
+104	Dedup range: {}
+105	-1 = unlimited
+106	Dedup threshold
+107	The dedup threshold must be a decimal
+108	Advanced rendering
+109	Video container
+110	Custom FFmpeg filters
+111	-c:a copy cannot be used with time scale
+112	Debug
+113	Advanced interpolation
+114	SVP interpolation preset
+115	SVP interpolation algorithm
+116	Interpolation block size
+117	Interpolation mask area: {}
+118	RIFE model
+119	Advanced blur
+120	Gaussian weight standard deviation: {:.2f}
+121	Gaussian weight mean: {:.2f}
+122	Gaussian weight boundary
+123	Loaded {} interpolation, multiplier: {} (fps: {}, multiplier: {})
+124	Enable motion blur
+125	Motion blur strength
+126	(0 = no blur, 1 = fully blend all frames, >1 = blend extra frames (trails))
+127	Output video frame rate
+128	How much to darken before blurring; makes highlights pop
+129	Standard deviation of the Gaussian blur weights
+130	Reverse the direction of the triangular weights
+131	Weight boundary, for a more even weight distribution
+132	Interpolate to a higher frame rate before blurring
+133	Interpolate by multiplier instead of a fixed frame rate
+134	Interpolation multiplier
+135	Input is interpolated to this frame rate (before blur)
+136	Target interpolation frame rate for the input (before blur)
+137	Quality: rife > svp
+138	Speed: svp > rife
+139	Before the main interpolation, pre-interpolate with a more accurate but slower AI model
+140	Pre-interpolation multiplier
+141	Input is interpolated to this rate (before the main interpolation and blur)
+142	Target pre-interpolation frame rate for the input (before blur)
+143	See blur's GitHub page for more information
+144	Interpolation block size
+145	(Larger is coarser but faster; smaller is finer but slower)
+146	Interpolation mask amount
+147	(Higher reduces blur on still objects but may affect smoothness)
+148	Remove duplicate frames and replace them with interpolated ones
+149	(Fixes uneven output caused by recording stutter)
+150	How many frames to look ahead for a unique frame when deduplicating
+151	If the source frame rate is low (e.g. 120fps gameplay recorded at 240fps), increase this 
+152	If static elements (e.g. menus) get blurred too, decrease this
+153	Motion threshold that triggers dedup
+154	Enable Debug under Advanced and render to see each frame's motion on screen
+155	Speed: old > svp > rife
+156	Show a preview while rendering
+157	Include the blur settings in the output file name
+158	Enable video time scale adjustment
+159	Input video time scale
+160	Output video time scale
+161	Change the audio pitch along with the speed
+162	Enable video filters
+163	Adjust the output brightness
+164	Adjust the output saturation
+165	Adjust the output contrast
+166	Interpolate with the GPU
+167	Render with the GPU
+168	Choose the GPU type
+169	Output container format
+170	Custom FFmpeg filters used when rendering
+171	(Overrides the GPU and quality options)
+172	Show the debug window and print the commands blur runs
+173	Copy the input file's modified date
+174	Failed to build the config preview; click to copy the error
+175	Loading config preview...
+176	Failed to build the preview.
+177	Preview video not found.
+178	Drag a video here to add it
+179	or open a file
+180	Reset invalid config entries to defaults
+181	Export
+182	Config exported to the clipboard
+183	Import
+184	Config imported from the clipboard
+185	Clipboard is empty or cannot be read
+186	Open config folder
+187	Failed to open the config folder: {}
+188	Failed to initialize desktop notifications: {}
+189	Desktop notifications not initialized
+190	Failed to show the desktop notification: {}
+191	Unblurred frame
+192	Previous frame
+193	Current frame
+194	Blurred frame ({})
+195	The number of blur frames depends on the input frame rate
+196	Interface scale

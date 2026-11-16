@@ -1,0 +1,196 @@
+1	Baixe e instale novamente a versão mais recente.
+2	FFmpeg não encontrado.
+3	FFprobe não encontrado.
+4	VapourSynth não encontrado.
+5	Se você não sabe o que isso significa, tente usar o instalador.
+6	(1: melhor, 23: equilibrado, 51: pior)\\n
+7	(0: melhor, 23: equilibrado, 51: pior)
+8	(1: melhor, 23: equilibrado, 51: pior)
+9	(100: melhor, 0: pior)
+10	(0: proxy, 1: lt, 2: std, 3: hq, 4: 4444xq)
+11	(0: sem perdas, 23: equilibrado, 51: pior)
+12	(15: melhor, 30: equilibrado, 50: pior)
+13	O caminho de entrada não existe
+14	Erro: {}
+15	Carregando configuração: {}
+16	Configuração importada
+17	Falha ao carregar a configuração: 
+18	Continuar
+19	Pausar
+20	Cancelar
+21	Adicionar arquivos
+22	Configuração
+23	Voltar
+24	Falha ao renderizar '{}', clique para copiar o erro
+25	Erro copiado para a área de transferência
+26	Falha na renderização do desfoque
+27	Renderização de '{}' interrompida
+28	Renderização de '{}' concluída
+29	Falha ao abrir a pasta de saída: {}
+30	Renderização do desfoque concluída
+31	Renderização concluída com sucesso
+32	Falha ao inicializar o SDL
+33	Falha ao criar a janela SDL
+34	Falha ao criar o contexto GL do SDL
+35	Falha ao inicializar o GLAD
+36	Falha ao inicializar o renderizador
+37	Nova versão ({}) disponível! Clique para executar o instalador.
+38	Baixando atualização...
+39	Nova versão ({}) disponível! Clique para a página de download.
+40	Adicionado à fila de renderização: '{}'
+41	Arquivo não é um vídeo válido ou não pode ser lido: {}
+42	Usar configuração substituta da pasta do vídeo
+43	Vídeo de exemplo adicionado
+44	Arquivos de vídeo
+45	Pausado
+46	Quadro {}/{}
+47	{:.2f} quadros/s
+48	 h 
+49	 min 
+50	 s
+51	Restam ~ {}
+52	Inicializando a renderização...
+53	Falha na inicialização
+54	Abrir arquivo
+55	ou arraste para qualquer lugar da janela
+56	Carregando configuração...
+57	Salvar
+58	Desfazer alterações
+59	Restaurar padrão
+60	Vídeo de saída
+61	Peso
+62	Configurações desta seção alteradas, ativado à força
+63	Desfoque
+64	Intensidade do desfoque: {:.2f}
+65	Taxa de quadros de saída: {} fps
+66	Ponderação do desfoque
+67	Gama do desfoque: {:.2f}
+68	Interpolação
+69	Interpolar por fator
+70	Taxa de interpolação: {:.1f}x
+71	Taxa de interpolação: {} fps
+72	Método de interpolação
+73	Pré-interpolação
+74	Pré-interpolar por fator
+75	Taxa de pré-interpolação: {:.1f}x
+76	Taxa de pré-interpolação: {} fps
+77	Deduplicação
+78	Método de deduplicação
+79	Renderizar
+80	Preset de codificação ({})
+81	Qualidade: {}
+82	Qualidade substituída pelo filtro FFmpeg personalizado
+83	Prévia
+84	Nome de arquivo detalhado
+85	Copiar data
+86	Caminho de saída
+87	Aceleração por GPU
+88	Decodificação por GPU
+89	Interpolação por GPU
+90	Codificação por GPU
+91	Dispositivo de codificação GPU
+92	Codificação GPU substituída pelo filtro FFmpeg personalizado
+93	Padrão - primeiro dispositivo disponível
+94	Escala de tempo
+95	Escala de tempo de entrada: {:.2f}
+96	Escala de tempo de saída: {:.2f}
+97	Ajustar o tom do áudio após mudar a velocidade
+98	Filtros
+99	Brilho: {:.2f}
+100	Saturação: {:.2f}
+101	Contraste: {:.2f}
+102	Avançado
+103	Deduplicação avançada
+104	Intervalo de deduplicação: {}
+105	-1 = infinito
+106	Limite de deduplicação
+107	O limite deve ser decimal
+108	Renderização avançada
+109	Contêiner de vídeo
+110	Filtro FFmpeg personalizado
+111	-c:a copy não funciona com escala de tempo
+112	Depuração
+113	Interpolação avançada
+114	Preset de interpolação SVP
+115	Algoritmo de interpolação SVP
+116	Tamanho do bloco de interpolação
+117	Área da máscara de interpolação: {}
+118	Modelo RIFE
+119	Desfoque avançado
+120	Desvio padrão dos pesos gaussianos: {:.2f}
+121	Média dos pesos gaussianos: {:.2f}
+122	Limite dos pesos gaussianos
+123	Interpolação {} carregada, fator: {} (taxa: {}, fator: {})
+124	Ativar desfoque de movimento
+125	Intensidade do desfoque de movimento
+126	(0 = sem desfoque, 1 = mistura total dos quadros, >1 = quadros extras (rastro))
+127	Taxa de quadros do vídeo de saída
+128	Escurece a imagem antes do desfoque, realça os realces
+129	Desvio padrão dos pesos do desfoque gaussiano
+130	Inverte a direção dos pesos triangulares
+131	Limite dos pesos, deixa a distribuição mais uniforme
+132	Interpolar para uma taxa maior antes do desfoque
+133	Interpolar por fator em vez de taxa fixa
+134	Fator de interpolação
+135	O vídeo de entrada será interpolado para esta taxa (antes do desfoque)
+136	Taxa alvo da interpolação (antes do desfoque)
+137	Qualidade: rife > svp
+138	Velocidade: svp > rife
+139	Pré-interpolar com um modelo de IA mais preciso e mais lento
+140	Fator de pré-interpolação
+141	Entrada interpolada para esta taxa (antes da interpolação e do desfoque)
+142	Taxa alvo da pré-interpolação (antes do desfoque)
+143	Mais informações na página do blur no GitHub
+144	Tamanho do bloco da interpolação
+145	(maior = mais grosseiro, mas mais rápido; menor = mais fino, mas mais lento)
+146	Quantidade de máscara da interpolação
+147	(maior = menos desfoque em objetos estáticos, mas pode afetar a fluidez)
+148	Remover quadros duplicados e substituir pela interpolação
+149	(corrige a saída travada por gravação instável)
+150	Quadros procurados para trás até um quadro único
+151	Aumente se a fonte tiver taxa baixa (ex.: jogo de 120 fps gravado a 240 fps) 
+152	Diminua se elementos fixos (ex.: menus) também ficarem desfocados
+153	Limite de movimento que dispara a deduplicação
+154	Ative a depuração em “Avançado” e renderize para ver o movimento por quadro
+155	Velocidade: old > svp > rife
+156	Mostrar prévia durante a renderização
+157	Incluir ajustes de desfoque no nome do arquivo
+158	Ativar ajuste da escala de tempo
+159	Escala de tempo do vídeo de entrada
+160	Escala de tempo do vídeo de saída
+161	Alterar o tom do áudio junto com a velocidade
+162	Ativar filtros de vídeo
+163	Ajustar o brilho do vídeo de saída
+164	Ajustar a saturação do vídeo de saída
+165	Ajustar o contraste do vídeo de saída
+166	Interpolar com a GPU
+167	Renderizar com a GPU
+168	Escolher o tipo de GPU
+169	Formato do contêiner do vídeo de saída
+170	Filtro FFmpeg personalizado usado na renderização
+171	(substitui as opções de GPU e qualidade)
+172	Mostrar a janela de depuração e o comando do blur
+173	Copiar a data de modificação do arquivo de entrada
+174	Falha na prévia da configuração, clique para copiar o erro
+175	Carregando prévia da configuração...
+176	Falha ao gerar a prévia.
+177	Vídeo de prévia não encontrado.
+178	Arraste um vídeo aqui para adicionar
+179	ou abrir arquivo
+180	Redefinir itens inválidos para o padrão
+181	Exportar
+182	Configuração exportada para a área de transferência
+183	Importar
+184	Configuração importada da área de transferência
+185	Área de transferência vazia ou ilegível
+186	Abrir a pasta de configuração
+187	Falha ao abrir a pasta de configuração: {}
+188	Falha ao inicializar as notificações: {}
+189	Notificações da área de trabalho não inicializadas
+190	Falha ao exibir a notificação: {}
+191	Quadro sem desfoque
+192	Quadro anterior
+193	Quadro atual
+194	Quadro desfocado ({})
+195	O número de quadros desfocados depende da taxa de entrada
+196	Escala da interface

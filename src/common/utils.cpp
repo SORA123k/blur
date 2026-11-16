@@ -14,10 +14,22 @@ std::wstring u::towstring(const std::string& str) {
 		return std::wstring();
 
 #ifdef _WIN32
-	// Windows-specific implementation
-	int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), nullptr, 0);
-	std::wstring result(size_needed, 0);
-	MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), &result[0], size_needed);
+	// Windows-specific implementation.
+	// Not every narrow string here is UTF-8: anything that came back out of a
+	// std::filesystem::path is in the ANSI code page. Treat invalid UTF-8 as ANSI
+	// instead of writing into a zero-length buffer (which used to crash with
+	// non-ascii file names).
+	int size_needed =
+		MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, str.data(), (int)str.size(), nullptr, 0);
+	UINT code_page = CP_UTF8;
+	if (size_needed <= 0) {
+		code_page = CP_ACP;
+		size_needed = MultiByteToWideChar(CP_ACP, 0, str.data(), (int)str.size(), nullptr, 0);
+	}
+	if (size_needed <= 0)
+		return std::wstring();
+	std::wstring result(static_cast<size_t>(size_needed), L'\0');
+	MultiByteToWideChar(code_page, 0, str.data(), (int)str.size(), result.data(), size_needed);
 	return result;
 #else
 	// POSIX systems (Linux, macOS, etc.)
@@ -34,9 +46,12 @@ std::string u::tostring(const std::wstring& wstr) {
 
 #ifdef _WIN32
 	// Windows-specific implementation
-	int size_needed = WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), nullptr, 0, nullptr, nullptr);
-	std::string result(size_needed, 0);
-	WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), &result[0], size_needed, nullptr, nullptr);
+	int size_needed =
+		WideCharToMultiByte(CP_UTF8, 0, wstr.data(), (int)wstr.size(), nullptr, 0, nullptr, nullptr);
+	if (size_needed <= 0)
+		return std::string();
+	std::string result(static_cast<size_t>(size_needed), '\0');
+	WideCharToMultiByte(CP_UTF8, 0, wstr.data(), (int)wstr.size(), result.data(), size_needed, nullptr, nullptr);
 	return result;
 #else
 	// POSIX systems (Linux, macOS, etc.)

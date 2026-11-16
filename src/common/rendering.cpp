@@ -1,4 +1,4 @@
-﻿#include "rendering.h"
+#include "rendering.h"
 #include "config_presets.h"
 #include "utils.h"
 
@@ -64,9 +64,14 @@ void Render::build_output_filename() {
 	std::filesystem::create_directories(output_folder);
 
 	// build output filename
+	// Note: built as a wide string. Building it as a narrow (UTF-8) std::string and
+	// handing that to std::filesystem::path reinterprets it as the ANSI code page,
+	// which mangles and later crashes on non-ascii video names.
+	const std::wstring base_name = this->m_video_path.stem().wstring();
+
 	int num = 1;
 	do {
-		std::string output_filename = this->m_video_name + " - blur";
+		std::wstring output_filename = base_name + L" - blur";
 
 		if (this->m_settings.detailed_filenames) {
 			std::string extra_details;
@@ -93,16 +98,16 @@ void Render::build_output_filename() {
 			}
 
 			if (extra_details != "") {
-				output_filename += " ~ " + extra_details;
+				output_filename += L" ~ " + u::towstring(extra_details);
 			}
 		}
 
 		if (num > 1)
-			output_filename += std::format(" ({})", num);
+			output_filename += std::format(L" ({})", num);
 
-		output_filename += "." + this->m_settings.advanced.video_container;
+		output_filename += L"." + u::towstring(this->m_settings.advanced.video_container);
 
-		this->m_output_path = output_folder / output_filename;
+		this->m_output_path = output_folder / std::filesystem::path(output_filename);
 
 		num++;
 	}

@@ -426,7 +426,7 @@ tl::expected<nlohmann::json, std::string> BlurSettings::to_json() const {
 	if (!rife_model_path)
 		return tl::unexpected(rife_model_path.error());
 
-	j["rife_model"] = *rife_model_path;
+	j["rife_model"] = u::tostring(rife_model_path->wstring());
 
 	j["manual_svp"] = this->advanced.manual_svp;
 	j["super_string"] = this->advanced.super_string;

@@ -38,6 +38,19 @@ bool gui::renderer::redraw_window(bool rendered_last, bool want_to_render) {
 	ui::on_frame_start();
 	sdl::on_frame_start();
 
+	// tell the user once when rife interpolation had to fall back to svp because
+	// no vulkan capable gpu was found
+	if (blur.svp_fallback_applied) {
+		blur.svp_fallback_applied = false;
+
+		gui::components::notifications::add(
+			i18n::t("未检测到支持 Vulkan 的显卡，已自动改用 SVP 插帧（较慢但兼容性更好）"),
+			ui::NotificationType::INFO,
+			{},
+			std::chrono::duration<float>(6.f)
+		);
+	}
+
 	render::update_window_size(sdl::window);
 
 	auto now = std::chrono::steady_clock::now();

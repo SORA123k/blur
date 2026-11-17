@@ -173,6 +173,11 @@ tl::expected<RenderCommands, std::string> Render::build_render_commands() {
 
 	std::filesystem::path blur_script_path = (blur.resources_path / "lib/blur.py");
 
+	// On a machine without a vulkan capable gpu, rife cannot run. Fall back to svp
+	// for this render (the user's config keeps whatever they chose) and wait a
+	// moment for the background gpu detection so a gpu machine is never downgraded.
+	u::apply_interpolation_fallback(m_settings, 5000);
+
 	auto settings_json = m_settings.to_json();
 	if (!settings_json)
 		return tl::unexpected(settings_json.error());

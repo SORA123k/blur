@@ -395,6 +395,9 @@ namespace u {
 	);
 
 	void set_fastest_rife_gpu(BlurSettings& settings);
+	// switch rife interpolation to svp when no vulkan capable gpu exists.
+	// wait_ms > 0 waits for the background gpu detection to finish first.
+	void apply_interpolation_fallback(BlurSettings& settings, int wait_ms);
 	void verify_gpu_encoding(BlurSettings& settings);
 
 #ifdef WIN32

@@ -194,3 +194,4 @@
 194	Blurred frame ({})
 195	The number of blur frames depends on the input frame rate
 196	Interface scale
+197	No Vulkan capable GPU detected, using SVP interpolation instead (slower but more compatible)

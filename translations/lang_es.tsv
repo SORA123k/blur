@@ -194,3 +194,4 @@
 194	Fotograma de desenfoque ({})
 195	El número de fotogramas de desenfoque depende de los fps de entrada
 196	Escala de la interfaz
+197	No se detectó ninguna GPU compatible con Vulkan; se usará interpolación SVP (más lenta pero más compatible)

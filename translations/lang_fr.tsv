@@ -194,3 +194,4 @@
 194	Image floue ({})
 195	Le nombre d'images floues dépend de la fréquence d'entrée
 196	Échelle de l'interface
+197	Aucun GPU compatible Vulkan détecté, interpolation SVP utilisée (plus lent mais plus compatible)

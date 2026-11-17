@@ -9,7 +9,9 @@ tl::expected<RenderCommands, std::string> FrameRender::build_render_commands(
 ) {
 	std::filesystem::path blur_script_path = (blur.resources_path / "lib/blur.py");
 
-	auto settings_json = settings.to_json();
+	auto frame_settings = settings;
+	u::apply_interpolation_fallback(frame_settings, 1000);
+	auto settings_json = frame_settings.to_json();
 	if (!settings_json)
 		return tl::unexpected(settings_json.error());
 

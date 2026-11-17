@@ -194,3 +194,4 @@
 194	Blur-Frame ({})
 195	Anzahl der Blur-Frames hängt von der Eingabe-Framerate ab
 196	Oberflächenskalierung
+197	Keine Vulkan-fähige GPU gefunden, es wird SVP-Interpolation verwendet (langsamer, aber kompatibler)

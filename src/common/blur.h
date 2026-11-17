@@ -44,6 +44,9 @@ public:
 	std::map<int, std::string> rife_gpus;
 	std::vector<std::string> rife_gpu_names;
 	bool initialised_rife_gpus = false;
+	// set when a render asked for rife interpolation but no vulkan capable gpu was
+	// found, so the gui can tell the user once that it fell back to svp
+	std::atomic<bool> svp_fallback_applied = false;
 
 	void initialise_rife_gpus();
 	void pick_fastest_rife_gpu(BlurSettings& settings);

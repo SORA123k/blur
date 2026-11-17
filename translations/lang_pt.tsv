@@ -194,3 +194,4 @@
 194	Quadro desfocado ({})
 195	O número de quadros desfocados depende da taxa de entrada
 196	Escala da interface
+197	Nenhuma GPU compatível com Vulkan detectada; usando interpolação SVP (mais lenta, porém mais compatível)

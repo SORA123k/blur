@@ -656,8 +656,28 @@ int u::get_fastest_rife_gpu_index(
 	return fastest_index;
 }
 
+void u::apply_interpolation_fallback(BlurSettings& settings, int wait_ms) {
+	// gpu detection runs on a background thread; a render that starts immediately
+	// (the cli especially) can get here before it finished
+	for (int waited = 0; waited < wait_ms && !blur.initialised_rife_gpus; waited += 25)
+		std::this_thread::sleep_for(std::chrono::milliseconds(25));
+
+	if (!blur.initialised_rife_gpus)
+		return; // unknown yet, leave the settings alone
+
+	if (!blur.rife_gpus.empty())
+		return;
+
+	if (!settings.interpolate || settings.interpolation_method != "rife")
+		return;
+
+	settings.interpolation_method = "svp";
+	blur.svp_fallback_applied = true;
+	u::log("no vulkan capable gpu found, using svp interpolation instead of rife");
+}
 void u::set_fastest_rife_gpu(BlurSettings& settings) {
 	auto app_config = config_app::get_app_config();
+
 	if (app_config.rife_gpu_index != -1)
 		return;
 

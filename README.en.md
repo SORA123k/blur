@@ -43,7 +43,7 @@ Installer details:
 ### Requirements
 
 - Windows 10 1803+ / Windows 11, x64
-- RIFE interpolation needs a Vulkan capable GPU; if none is detected, set "Configuration → Interpolation → interpolation method" to `svp` (works on CPU, just slower)
+- RIFE interpolation needs a Vulkan capable GPU; **if none is detected it falls back to SVP automatically and tells you** (CPU works too, just slower). Your config keeps RIFE.
 - The installer uses the bundled `tar.exe` (Windows 10 1803+); older systems should use the portable zip
 
 ## Fixed in this fork

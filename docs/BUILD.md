@@ -145,9 +145,17 @@ change translations or want different flags.
 ## 5. Packaging
 
 ```powershell
-# portable
-Compress-Archive -Path 1-blur\* -DestinationPath blur-portable.zip
+# portable zip
+Compress-Archive -Path out\* -DestinationPath blur-portable.zip
 
-# installer: stub + payload zip + 16 byte footer (offset, "BLURZIP1")
-# see tools/package.ps1
+# installer: tools/installer/build.bat, then tools/installer/package.ps1
+# the exe is a small stub + the payload zip + a 16 byte footer:
+#   8 bytes  offset of the zip inside the exe
+#   8 bytes  ascii magic "BLURZIP1"
+# On run it shows a folder picker (default %LOCALAPPDATA%\Programs\blur), extracts
+# with the built-in tar.exe, writes shortcuts, an uninstall.ps1 and the
+# "Apps & features" registry entry.
+cd tools\installer
+build.bat
+.\package.ps1 -PayloadZip ..\..\blur-payload.zip -OutFile ..\..\blur-setup.exe
 ```

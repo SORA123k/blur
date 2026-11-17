@@ -28,17 +28,17 @@ Grab one of these from [Releases](https://github.com/SORA123k/blur/releases):
 
 | Type | File | Difference |
 | --- | --- | --- |
-| **Installer** (recommended) | `blur-v2.45-multilingual-setup-win64.exe` | Installs into your user profile, **no admin rights**, nothing else to install; asks whether to create a **desktop shortcut** (on by default, can be declined); registers in "Settings → Apps → Installed apps" for uninstalling. |
+| **Installer** (recommended) | `blur-v2.45-multilingual-setup-win64.exe` | **Asks where to install with a folder picker** (default `%LOCALAPPDATA%\Programs\blur`, any drive works), **no admin rights**, nothing else to install; then asks whether to create a **desktop shortcut** (on by default); registers in "Settings → Apps → Installed apps". |
 | **Portable** | `blur-v2.45-multilingual-portable-win64.zip` | Unzip anywhere (avoid non-ASCII paths), run `blur-gui.exe`. No registry writes, no shortcuts, delete the folder to remove. |
 
 Both carry every runtime dependency (FFmpeg, VapourSynth, RIFE models, fonts) — install and go, nothing else needed.
 
 Installer details:
 
-- Installs to `%LOCALAPPDATA%\Programs\blur`, current user only, nothing in Program Files
+- **You choose the install folder** (default `%LOCALAPPDATA%\Programs\blur`, creates a `blur` subfolder inside it)
 - Asks once whether to create a desktop shortcut; "No" leaves only the start menu shortcut
 - Uninstall from Settings → Apps → Installed apps → blur (same as running `uninstall.cmd`)
-- Unattended: `blur-v2.45-multilingual-setup-win64.exe /S` (optionally `--no-desktop-shortcut`)
+- Unattended: `setup.exe /S /D="D:\Games\blur"` (optionally `--no-desktop-shortcut`)
 
 ### Requirements
 
